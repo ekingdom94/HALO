@@ -56,3 +56,28 @@ $(function () {
   // 무한 슬라이드 실행
   setInterval(toolSliderMove, toolSliderIntervalTime);
 })
+
+
+$(window).resize(function() {
+  if ($(window).width() <= 1440) {
+    $('#sub_header').hide();
+  }
+}).resize();
+
+// .submenu & .sub_box slideDown
+    function handleMenuInteraction() {
+      if (window.matchMedia("(min-width: 1440px)").matches) {
+          // 화면 크기가 1440px 이상일 때 실행
+          $('.menu>ul>li').mouseover(function() {
+              $('.submenu').stop().slideDown();
+              $('.sub_box').stop().slideDown();
+          }).mouseout(function() {
+              $('.submenu').stop().slideUp();
+              $('.sub_box').stop().slideUp();
+          });
+      } else {
+          // 1440px 미만일 경우 기존 이벤트 제거 (옵션)
+          $('.menu>ul>li').off('mouseover mouseout');
+      }
+      
+    }

@@ -1,16 +1,14 @@
 $(function () {
-
-  // .submenu & .sub_box slideDown
-  $('.menu>ul>li').mouseover(function () {
-    $('.submenu').stop().slideDown();
-    $('.sub_box').stop().slideDown();
-    $(this).find('a').addClass('active')
-  }).mouseout(function () {
-    $('.submenu').stop().slideUp();
-    $('.sub_box').stop().slideUp();
-    $(this).find('a').removeClass('active')
-  })
-
+// // .submenu & .sub_box slideDown
+// $('.menu>ul>li').mouseover(function () {
+//   $('.submenu').stop().slideDown();
+//   $('.sub_box').stop().slideDown();
+//   $(this).find('a').addClass('active')
+// }).mouseout(function () {
+//   $('.submenu').stop().slideUp();
+//   $('.sub_box').stop().slideUp();
+//   $(this).find('a').removeClass('active')
+// })
 
 
   //---------------------------------------------------------------------------------------------------- slider
@@ -315,6 +313,21 @@ $(function () {
   updateGiftVisibleCount(); // 페이지 로드 시 초기 상태 설정
   // (추가된 부분 끝)
 
-
+    // .submenu & .sub_box slideDown
+    function handleMenuInteraction() {
+      if (window.matchMedia("(min-width: 1440px)").matches) {
+          // 화면 크기가 1440px 이상일 때 실행
+          $('.menu>ul>li').mouseover(function() {
+              $('.submenu').stop().slideDown();
+              $('.sub_box').stop().slideDown();
+          }).mouseout(function() {
+              $('.submenu').stop().slideUp();
+              $('.sub_box').stop().slideUp();
+          });
+      } else {
+          // 1440px 미만일 경우 기존 이벤트 제거 (옵션)
+          $('.menu>ul>li').off('mouseover mouseout');
+      }
+    }
 
 })

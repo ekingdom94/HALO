@@ -391,6 +391,11 @@ $(function () {
   })
 
 
+  $(window).resize(function() {
+    if ($(window).width() <= 1440) {
+      $('#sub_header').hide();
+    }
+  }).resize();
   
 
 

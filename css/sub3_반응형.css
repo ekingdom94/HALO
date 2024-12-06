@@ -277,7 +277,7 @@
     height: fit-content;
     grid-column: span 12;
     position: fixed;
-    bottom: 0; top: unset;
+    bottom: 64px; top: unset;
     display: flex;
     flex-flow: wrap;
     justify-content: space-between;

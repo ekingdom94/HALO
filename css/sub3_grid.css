@@ -514,7 +514,6 @@ body {
   gap: 24px;
   grid-auto-rows: auto;
   justify-items: center; 
-  overflow: hidden;
   position: relative;
 }
 
@@ -524,13 +523,14 @@ body {
   height: 90px;
   margin: 0 auto;
   margin-bottom: 20px;
-  position: sticky !important;
+  position: sticky ;
   top: 0;
   z-index: 100;
   background-color: #fff;
-  box-shadow: 0 3px 5px 0 rgba(0,0,0,0.1);
   grid-column: span 9;
   font-size: 1.13em;
+  overflow: hidden;
+  box-shadow: 0 3px 5px 0 rgba(0,0,0,0.1);
 }
 #main_bottom #top_menu>ul {
   width: 100%;
