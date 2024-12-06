@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>dyson_halo_sub1</title>
+  <!-- css -->
+  <link rel="stylesheet" href="./css/reset.css">
+  <link rel="stylesheet" href="./css/Header_footer.css">
+  <link rel="stylesheet" href="css/chat_blk.css">
+  <link rel="stylesheet" href="./css/sub1.css">
+  <!-- 반응형 -->
+  <link rel="stylesheet" href="./css/Header_footer_반응형.css">
+  <!-- 스크립트 -->
+  <script src="js/jquery-3.7.1.min.js"></script>
+  <script src="js/header_footer.js"></script>
+  <script src="js/chat_blk_sub1_sub2.js"></script>
+  <script src="js/sub1.js" defer></script>
+</head>
+
+<body>
+
+  <!-- 챗봇 chatbot  시작-->
+  <div id="chat_bot" class="float">
+    <div id="chat_bot_list_container">
+      <ul id="chat_bot_list">
+        <li><a href="#" onclick="return "><span></span>체험 가능 스토어 찾기</a></li>
+        <li><a href="#" onclick="return "><span></span>다이슨 디지털 도우미</a></li>
+      </ul>
+    </div>
+    <button id="chat_bot_btn"><span></span></button>
+    <p id="ad_banner">11월 27일 (수) 오전 10시 헤어케어 / 오후 8시 청소기 라이브 특가 <button></button></p>
+  </div>
+  <!-- 챗봇 chatbot 끝 -->
+
+
+  <!-- 헤더 시작  -->
+  <div id="header">
+    <!-- 헤더 > 탑메뉴 -->
+    <div class="topnav">
+      <div>
+        <ul class="topmenu">
+          <li><a href="#" onclick="return false">제품등록</a></li>
+          <li><a href="#" onclick="return false">고객지원</a></li>
+          <li><a href="#" onclick="return false">로그인</a></li>
+        </ul>
+      </div>
+    </div>
+
+
+    <!-- 헤더 > 네비 -->
+    <div class="nav">
+      <div class="bottomnav">
+
+        <!-- 헤더 > 로고 -->
+        <div class="logo">
+          <a href="#" onclick="return false">
+            <img src="./img/로고.svg" alt="헤더로고">
+          </a>
+        </div>
+        <!--  헤더> 메뉴-->
+        <div class="menu">
+          <ul>
+            <li>
+              <a href="#" onclick="return false">헤어케어</a>
+              <ul class="submenu">
+                <li><a href="#" onclick="return false">스타일러</a></li>
+                <li><a href="#" onclick="return false">드라이어</a></li>
+                <li><a href="#" onclick="return false">스트레이트너</a></li>
+                <li><a href="#" onclick="return false">전문가용</a></li>
+                <li><a href="#" onclick="return false">액세서리</a></li>
+              </ul>
+            </li>
+
+            <li>
+              <a href="#" onclick="return false">청소기</a>
+              <ul class="submenu">
+                <li><a href="#" onclick="return false">물청소기</a></li>
+                <li><a href="#" onclick="return false">진공 물청소기</a></li>
+                <li><a href="#" onclick="return false">진공청소기</a></li>
+                <li><a href="#" onclick="return false">로봇 청소기</a></li>
+                <li><a href="#" onclick="return false">펫케어</a></li>
+                <li><a href="#" onclick="return false">액세서리</a></li>
+              </ul>
+            </li>
+
+            <li>
+              <a href="#" onclick="return false">공기청정기 / 선풍기</a>
+              <ul class="submenu">
+                <li><a href="#" onclick="return false">공기청정기</a></li>
+                <li><a href="#" onclick="return false">선풍기</a></li>
+                <li><a href="#" onclick="return false">액세서리</a></li>
+              </ul>
+            </li>
+
+            <li>
+              <a href="#" onclick="return false">헤드폰</a>
+              <ul class="submenu">
+              </ul>
+            </li>
+
+            <li><a href="#" onclick="return false">조명</a>
+              <ul class="submenu">
+              </ul>
+            </li>
+          </ul>
+          <div class="sub_box"></div>
+        </div>
+
+
+        <div class="navright">
+          <div class="search">
+            <input type="search" name="search" id="search" placeholder="검색어를 입력하세요">
+            <a href="#" onclick="return false"><img src="./img/search.png" alt="검색"></a>
+          </div>
+          <div class="basket">
+            <a href="#" onclick="return false"><img src="./img/basket.png" alt="장바구니"></a>
+          </div>
+        </div>
+
+
+      </div>
+
+    </div>
+
+
+  </div>
+  <!-- 헤더 끝 -->
+
+
+
+
+
+
+  <!-- 서브헤더 -->
+  <div id="sub_header">
+    <div class="container">
+      <span class="haircare">
+        헤어케어
+      </span>
+      <ul id="category">
+        <li><a href="#" onclick="return false">모두보기</a></li>
+        <li><a href="#" onclick="return false">스타일러</a></li>
+        <li><a href="#" onclick="return false">드라이어</a></li>
+        <li><a href="#" onclick="return false">스트레이트너</a></li>
+        <li><a href="#" onclick="return false">액세서리</a></li>
+        <li><a href="#" onclick="return false">전문가용</a></li>
+      </ul>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+  <!-- 배너 -->
+  <div id="banner" class="container">
+    <h1>헤어케어</h1>
+  </div>
+
+
+  <!-- 카테고리 선택 -->
+  <div id="category_sel">
+    <div class="select container">
+      <ul>
+        <li>
+          <a href="#" onclick="return false">
+            <h1>모두보기</h1>
+            <img src="img/sub1/모두보기.png" alt="모두보기">
+            <h2>모두보기</h2>
+          </a>
+        </li>
+        <li>
+          <a href="#" onclick="return false">
+            <h1>스타일러</h1>
+            <img src="img/sub1/스타일러.png" alt="스타일러">
+            <h2>스타일러</h2>
+          </a>
+        </li>
+        <li>
+          <a href="#" onclick="return false">
+            <h1>드라이어</h1>
+            <img src="img/sub1/드라이어.png" alt="드라이어">
+            <h2>드라이어</h2>
+          </a>
+        </li>
+        <li>
+          <a href="#" onclick="return false">
+            <h1>스트레이트너</h1>
+            <img src="img/sub1/스트레이트너.png" alt="스트레이트너">
+            <h2>스트레이트너</h2>
+          </a>
+        </li>
+        <li>
+          <a href="#" onclick="return false">
+            <h1>액세서리</h1>
+            <img src="img/sub1/image.png" alt="액세서리">
+            <h2>악세서리</h2>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+
+  <!-- 기프트배너 -->
+  <div id="gift_banner">
+    <div class="text container">
+      <div id="gift_banner_inner">
+        <p>다이슨 스트로베리 브론즈 에디션 출시</p>
+        <h1>
+          한정 기간 동안 <br>
+          다이슨의 <span>특별한 기프트 컬러</span>를 만나보세요
+        </h1>
+        <div class="button"><a href="#" onclick="return false">상품 보러 가기</a></div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- 스타일 시작 -->
+  <div id="style" class="container">
+    <!-- 스타일 상단 -->
+    <div class="style_top">
+      <div class="text">
+        <h1>나만의 스타일 찾기</h1>
+        <p>
+          다이슨 제품을 가장 잘 활용할 수 있는 방법을 알아보고
+          다양한 스타일링 툴로 새로운 스타일을 연출해 보세요
+        </p>
+      </div>
+      <div class="button"><a href="#" onclick="return false">더 많은 스타일링 알아보기</a></div>
+    </div>
+
+    <!-- 스타일 박스 1, 2, 3, 4 -->
+    <div id="style_box">
+      <div class="style_box">
+        <a href="#" onclick="return false">
+          <img src="img/sub1/box1.png" alt="" class="bg">
+          <img src="img/sub1/media.png" alt="" class="media">
+          <img src="img/sub1/style_box1.png" alt="" class="product">
+          <div class="text">
+            <h1>빈티지 펌 스타일</h1>
+            <p>에어랩 i.d.™ 멀티 스타일러 앤 드라이어</p>
+
+          </div>
+        </a>
+      </div>
+
+      <div class="style_box">
+        <a href="#" onclick="return false">
+          <img src="img/sub1/box2.png" alt="" class="bg">
+          <img src="img/sub1/media.png" alt="" class="media">
+          <img src="img/sub1/style_box2.png" alt="" class="product">
+          <div class="text">
+            <h1>자연스러운 긴 머리 볼륨 스트레이트</h1>
+            <p>에어스트레이트 스트레이트너</p>
+
+          </div>
+        </a>
+      </div>
+
+      <div class="style_box">
+        <a href="#" onclick="return false">
+          <img src="img/sub1/box3.png" alt="스타일1" class="bg">
+          <img src="img/sub1/media.png" alt="스타일2" class="media">
+          <img src="img/sub1/style_box3.png" alt="스타일3" class="product">
+          <div class="text">
+            <h1>커튼 뱅 스트레이트</h1>
+            <p>슈퍼소닉 뉴럴 헤어 드라이어</p>
+          </div>
+        </a>
+
+      </div>
+
+      <div class="style_box">
+        <a href="#" onclick="return false">
+          <img src="img/sub1/box4.png" alt="스타일4" class="bg">
+          <img src="img/sub1/media.png" alt="스타일5" class="media">
+          <img src="img/sub1/style_box4.png" alt="스타일6" class="product">
+          <div class="text">
+            <h1>내추럴 볼륨 스타일</h1>
+            <p>에어스트레이트 스트레이트너</p>
+
+          </div>
+        </a>
+
+      </div>
+
+    </div>
+    <!-- 스타일박스 끝 -->
+
+  </div>
+  <!-- 스타일 끝 -->
+
+
+  <!-- 캠페인 시작 -->
+  <div id="campaign" class="container">
+    <h1>다이슨 공식몰 캠페인</h1>
+
+    <div class="campaign_box box1">
+      <img src="img/sub1/campaign.png" alt="캠페인1">
+      <div class="text">
+        <img src="img/sub1/airwrapID.png" alt="캠페인2">
+        <h1>환불 보장 캠페인</h1>
+        <p>
+          에어랩을 직접 사용해보고 결정하세요
+          사용 후 불만족 시, 1월 15일 이내 무료 반품 가능*
+        </p>
+      </div>
+    </div>
+
+    <div class="campaign_box box2">
+      <img src="img/sub1/initial.png" alt="캠페인3">
+      <div class="text">
+        <img src="img/logo.svg" alt="캠페인2" style="filter:opacity(0.8)">
+        <h1>이니셜 각인 서비스</h1>
+        <p>
+          오직 공식몰과 데모스토어에서만 제공되는
+          각인 서비스로 나만의 케이스를 만들어 보세요.
+        </p>
+      </div>
+    </div>
+  </div>
+  <!-- 캠페인 끝 -->
+
+  <!-- 코안다 기술 영상 -->
+  <div id="tech">
+    <!-- 영상 수정하기 -->
+    <video muted playsinline src="img/sub1/video/sub1-video.mp4" muted autoplay loop></video>
+  </div>
+  <!-- 코안다 기술 경상 끝 -->
+  <!-- 제품상세 시작 -->
+  <div id="tool_wrap">
+    <div id="tool">
+
+      <div class="text">
+        <p>코안다 효과로 새롭게 설계된 프리미엄 스타일링 툴</p>
+        <h1>향상된 스타일링 툴로 더 다양한 스타일을 연출해 보세요</h1>
+        <button style="cursor: pointer;">제품 상세보기</a></button>
+      </div>
+
+      <div class="tool_img" class="container">
+        <ul>
+          <li><img src="img/sub1/1.png" alt="툴1"></li>
+          <li><img src="img/sub1/2.png" alt="툴2"></li>
+          <li><img src="img/sub1/3.png" alt="툴3"></li>
+          <li><img src="img/sub1/4.png" alt="툴4"></li>
+          <li><img src="img/sub1/5.png" alt="툴5"></li>
+          <li><img src="img/sub1/6.png" alt="툴6"></li>
+          <li><img src="img/sub1/7.png" alt="툴7"></li>
+          <li><img src="img/sub1/8.png" alt="툴8"></li>
+          <li><img src="img/sub1/9.png" alt="툴9"></li>
+          <li><img src="img/sub1/10.png" alt="툴10"></li>
+          <li><img src="img/sub1/11.png" alt="툴11"></li>
+          <li><img src="img/sub1/12.png" alt="툴12"></li>
+
+        </ul>
+      </div>
+
+    </div>
+  </div>
+
+
+
+
+<a href="#" onclick="return false">
+  <footer>
+
+    <div id="footer_top">
+      <ul>
+        <li>
+          <a href="#" onclick="return false">제품</a>
+          <ul class="submenu2">
+            <li><a href="#" onclick="return false"    <li><a href="#" onclick="return false"   <li><a href="#" onclick="return false"           <li><a href="#" onclick="return false"   <li><a href="#" onclick="return false"</ul>
+        </li>
+        <li>
+          <a href="#" onclick="return false">프로모션</a>
+          <ul class="submenu2">
+            <li><a href="#" onclick="return false"        <li><a href="#" onclick="return false"   <li><a href="#" onclick="return false"  </ul>
+        </li>
+        <li>
+          <a href="#" onclick="return false">고객지원</a>
+          <ul class="submenu2">
+            <li><a href="#" onclick="return false"    <li><a href="#" onclick="return false"      <li><a href="#" onclick="return false"     <li><a href="#" onclick="return false"     <li><a href="#" onclick="return false"      <li><a href="#" onclick="return false"      </ul>
+        </li>
+        <li>
+          <a href="#" onclick="return false">기업정보</a>
+          <ul class="submenu2">
+            <li><a href="#" onclick="return false"     <li><a href="#" onclick="return false"      <li><a href="#" onclick="return false"   <li><a href="#" onclick="return false"</ul>
+        </li>
+      </ul>
+    </div>
+    <div id="footer_bottom">
+      <div class="footer_wrap">
+        <div class="left">
+          <div class="logo">
+            <a href="#" onclick="return false"><img src="img/로고.svg" alt="풋터로고" /></a>
+          </div>
+          <div class="lang">
+            <span class="dyson_korea">다이슨 코리아</span>
+            <div class="box">
+              <img src="img/icon/korea.svg" alt="언어선택" />
+              <span class="text">대한민국</span>
+              <img src="img/icon/chevron-down-gray.svg" alt="선택버튼" class="icon" />
+            </div>
+          </div>
+          <span class="add">
+            서울특별시 강남구 테헤란로 142, 아크플레이스 17층 .06236
+          </span>
+        </div>
+
+        <div class="right">
+          고객센터: 080-300-4253(수신자 부담) /1588-4253 (운영시간: 월-금 오전
+          9시-오후 6시)
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- 푸터 끝 -->
+
+
+</body>
+
+</html>

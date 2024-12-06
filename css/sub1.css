@@ -1,0 +1,1082 @@
+@charset "utf-8";
+
+/* * {  /* box-sizing: border-box; *}/
+/* 공통 사용  */
+body {
+  background-color: #fff;
+  color: #333;
+}
+/* 컨테이너 필요한거만 사용*/
+.container {
+  max-width: 1440px; /* 최대 컨테이너 너비 */
+  width: 100%; /* 100% 너비를 사용하여 반응형 구현 */
+  padding: 0 50px; /* 양 옆 50px 패딩 */
+  box-sizing: border-box;
+  margin: 0 auto; /* 가운데 정렬 */
+  display: grid;
+  grid-template-columns: repeat(12, 1fr); /* 12개의 칼럼 생성 */
+  gap: 24px; /* 칼럼 간의 간격 24px */
+}
+
+#product_grid {
+  grid-column: span 9; /* 9개의 칼럼을 차지 ----------  container 기준*/
+  height: fit-content; /* 내용에 맞게 높이를 조절 */
+  display: grid; /*그리드 레이아웃 설정 /-------------- 자식 요소 그리드 설정*/
+  grid-template-columns: repeat(3, 1fr); /* 내부 3개의 칼럼 설정 */
+  gap: 24px; /* 칼럼 간의 간격 24px */
+  grid-auto-rows: auto; /* 자동으로 높이 설정 */
+  justify-items: center; /* 그리드 아이템을 가로 중앙 정렬 */
+}
+/* -------------------------------------------------------- */
+
+#banner {
+  margin: 0 auto;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+}
+
+#banner > h1 {
+  padding: 40px 0 0;
+  text-wrap: nowrap;
+  font-size: 2em;
+  font-weight: 900;
+  color: #fff;
+  background-image: linear-gradient(120deg, #522a86 40%, #e8137b 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+#category_sel {
+  width: 100%;
+}
+#category_sel .select {
+  box-sizing: border-box;
+  margin: 40px auto;
+}
+#category_sel .select > ul {
+  grid-column: span 12;
+  height: 440px;
+  display: flex;
+}
+#category_sel .select > ul > li {
+  width: 25%;
+  height: 100%;
+  background-color: #f1f1f1;
+  position: relative;
+  overflow: hidden;
+}
+#category_sel .select > ul > li > a {
+  display: block;
+  width: 100%;
+  transition: 0.4s ease-in-out;
+}
+#category_sel .select > ul > li > a > h1 {
+  width: 140px;
+  position: absolute;
+  top: 50px;
+  left: 50%;
+  margin-left: -70px;
+  font-size: 1.5em;
+  font-weight: 700;
+  text-align: center;
+  color: #444;
+}
+#category_sel .select > ul > li > a > h2 {
+  display: none;
+}
+#category_sel .select > ul > li > a > img {
+  width: 100%;
+  height: 440px;
+  object-fit: cover;
+  margin-top: 70px;
+  filter: saturate(0);
+  opacity: 0.2;
+  box-shadow: 1px 10px rgba(0, 0, 0, 0.5);
+}
+
+#gift_banner {
+  width: 100%;
+  height: 560px;
+  background-image: url("../img/gift_banner.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 100% 50%;
+  background-color: #070508;
+  position: relative;
+}
+#gift_banner .text {
+  height: 100%;
+  padding: 150px 50px;
+  box-sizing: border-box;
+  color: #fff;
+}
+#gift_banner #gift_banner_inner {
+  grid-column: span 12;
+  height: 100%;
+}
+#gift_banner .text p {
+  font-weight: 300;
+  margin-bottom: 20px;
+}
+#gift_banner .text h1 {
+  font-size: 2em;
+  line-height: 1.25em;
+  margin-bottom: 32px;
+}
+#gift_banner .text h1 span {
+  color: #d5a29f;
+}
+#gift_banner .text .button {
+  width: 200px;
+  height: 48px;
+}
+#gift_banner .text .button > a {
+  width: 100%;
+  height: 100%;
+  border: 0.5px solid #fff;
+  border-radius: 50px;
+  display: block;
+  transition: 0.2s ease;
+  text-align: center;
+  line-height: 48px;
+}
+#gift_banner .text .button > a:hover,
+#gift_banner .text .button > a:active {
+  background-color: #ffa7ae;
+}
+
+#style {
+  height: fit-content;
+  box-sizing: border-box;
+  margin-top: 80px;
+}
+#style > .style_top {
+  grid-column: span 12;
+  height: fit-content;
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  margin-bottom: 24px;
+}
+#style .style_top .text {
+  width: 80%;
+}
+#style .style_top .text h1 {
+  font-size: 1.5em;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+#style .style_top .text p {
+  line-height: 23px;
+  letter-spacing: -0.3px;
+  font-weight: 300;
+  position: relative;
+  text-align: justify;
+}
+#style .style_top .button {
+  padding: 0 24px;
+  height: 64px;
+  border: 1px solid #333;
+  border-radius: 40px;
+  box-sizing: border-box;
+  margin-left: 24px;
+}
+#style .style_top .button > a {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1em;
+  font-weight: 500;
+  letter-spacing: -0.025em;
+  text-wrap: nowrap;
+}
+#style .style_top .button:hover,
+#style .style_top .button:active {
+  background-color: #333;
+  color: #fff;
+}
+
+#style #style_box {
+  grid-column: span 12;
+  display: grid;
+  grid-template-columns: repeat(2, 6fr);
+  gap: 24px;
+}
+#style #style_box .style_box {
+  grid-column: span 1;
+  height: fit-content;
+  position: relative;
+}
+#style #style_box .style_box .bg {
+  width: 100%;
+  height: 360px;
+  object-fit: cover;
+}
+#style #style_box .style_box .media {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  opacity: 0.3;
+}
+#style #style_box .style_box .product {
+  position: absolute;
+  right: 0px;
+  bottom: 0;
+}
+#style #style_box .style_box .text {
+  margin-top: 20px;
+  width: 100%;
+  letter-spacing: -1px;
+  position: relative;
+  color: #333;
+}
+#style #style_box .style_box .text h1 {
+  font-size: 1.25em;
+  margin-bottom: 12px;
+}
+#style #style_box .style_box .text p {
+  width: fit-content;
+  font-size: 0.88em;
+  line-height: 20px;
+  font-weight: bold;
+  letter-spacing: -0.7px;
+  display: inline-block;
+  position: relative;
+}
+#style #style_box .style_box .text p::after {
+  content: "";
+  display: block;
+  width: 20px;
+  height: 20px;
+  background-image: url(../img/sub1/chevron-right.png);
+  position: absolute;
+  right: -20px;
+  top: -2px;
+}
+
+#campaign {
+  height: fit-content;
+  margin-top: 80px;
+}
+#campaign > h1 {
+  grid-column: span 12;
+  font-size: 1.5em;
+  font-weight: 600;
+  color: #333;
+}
+#campaign .campaign_box {
+  grid-column: span 6;
+  height: 240px;
+  padding: 0px 48px;
+  box-sizing: border-box;
+  display: flex;
+  gap: 24px;
+  background-color: pink;
+  border-radius: 24px;
+}
+#campaign .campaign_box > img {
+  width: 240px;
+  height: 240px;
+  object-fit: cover;
+}
+#campaign .box1 > img {
+  object-position: 0 20px;
+}
+#campaign .campaign_box .text {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: start;
+  justify-content: center;
+  flex-direction: column;
+}
+#campaign .campaign_box .text img {
+  height: 24px;
+  object-fit: cover;
+  margin-bottom: 16px;
+}
+#campaign .campaign_box .text h1 {
+  font-size: 1.5em;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 16px;
+  text-wrap: nowrap;
+}
+#campaign .campaign_box .text p {
+  line-height: 19px;
+  color: #333;
+}
+
+#campaign .box2 {
+  background-color: #ffe5d7;
+}
+
+/* 코안다 영상 */
+#tech {
+  margin-top: 80px;
+  display: flex;
+  height: 640px;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+#tech video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 25%0%;
+}
+
+/* 제품상세 */
+#tool_wrap {
+  display: flex;
+  justify-content: center; /* 수평 가운데 정렬 */
+  align-items: center; /* 수직 가운데 정렬 (필요 시) */
+  height: fit-content;
+  padding: 60px 0;
+  background-color: #f1f1f1;
+}
+#tool {
+  width: 100%;
+  height: fit-content;
+}
+#tool .text {
+  text-align: center;
+}
+#tool .text p {
+  font-size: 1.25em;
+  margin-bottom: 16px;
+  letter-spacing: -0.7px;
+  color: #9e9b9b;
+}
+#tool .text h1 {
+  font-size: 2em;
+  margin-bottom: 36px;
+  letter-spacing: -0.7px;
+  color: #333;
+}
+#tool .text button {
+  width: 220px;
+  height: 56px;
+  color: #333;
+  font-size: 1em;
+  letter-spacing: 0.025em;
+  font-weight: 600;
+  border: 2px solid #333;
+  border-radius: 30px;
+}
+#tool .text button:hover,
+#tool .text button:active {
+  color: #fff;
+  background-color: #333;
+}
+#tool .text button > a {
+  display: block;
+  width: 220px;
+  height: 56px;
+  line-height: 56px;
+  text-align: center;
+}
+#tool .tool_img {
+  width: 100%;
+  height: fit-content;
+  overflow: hidden; /* 영역 밖 콘텐츠 숨김 */
+  position: relative; /* 이동 기준 */
+}
+#tool .tool_img > ul {
+  width: 200%;
+  height: 380px;
+  margin-top: 24px;
+  position: relative;
+  overflow: hidden;
+}
+#tool .tool_img > ul > li {
+  width: 110px;
+  height: fit-content;
+  float: left;
+  margin-right: 60px;
+}
+#tool .tool_img > ul > li > img {
+  width: 100%;
+  display: inline-block;
+  object-fit: cover;
+}
+
+/* 노트북 : 1024px -1440px */
+
+@media (min-width: 1024px) and (max-width: 1440px) {
+  .container {
+    width: 100%; /* 1440px에서 변경 */
+    margin: 0;
+    padding: 0 50px;
+    box-sizing: border-box;
+    gap: 24px;
+  }
+  #category_sel {
+    overflow: hidden;
+    overflow-x: scroll;
+    height: fit-content;
+  }
+  #category_sel .select {
+    width: 1600px;
+    box-sizing: border-box;
+    margin: 60px 0;
+  }
+  #category_sel .select ul {
+    width: fit-content;
+    height: 366px;
+    margin: 0;
+  }
+  #category_sel .select > ul > li {
+    width: 366px;
+    height: 100%;
+    background-color: #f1f1f1;
+    position: relative;
+    overflow: hidden;
+  }
+  #gift_banner {
+    height: 480px;
+    background-size: 130%;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+  }
+  #style #style_box .style_box .bg {
+    width: 100%;
+    height: 360px;
+    object-fit: cover;
+    object-position: 0% 50%;
+  }
+  #campaign .campaign_box {
+    padding: 0 32px;
+    box-sizing: border-box;
+  }
+  #tool_wrap {
+    padding: 56px 0;
+  }
+  #tool .tool_img > ul {
+    gap: 16px;
+    height: 300px;
+    overflow: hidden;
+  }
+  #tool .tool_img > ul > li {
+    width: 90px;
+  }
+}
+
+/*태블릿 가로 : 769px-1023px*/
+
+@media all and (min-width: 768px) and (max-width: 1023px) {
+  .container {
+    width: 100%;
+    margin: 0;
+    padding: 0 32px;
+    box-sizing: border-box;
+    grid-template-columns: repeat(8, 1fr);
+    gap: 16px;
+  }
+  #category_sel {
+    overflow: hidden;
+    overflow-x: scroll;
+    height: fit-content;
+  }
+  #category_sel .select {
+    width: 1600px;
+    box-sizing: border-box;
+    margin: 50px 0;
+  }
+  #category_sel .select ul {
+    width: fit-content;
+    height: 350px;
+    margin: 0;
+  }
+  #category_sel .select > ul > li {
+    width: 350px;
+    height: 100%;
+    background-color: #f1f1f1;
+    position: relative;
+    overflow: hidden;
+  }
+  #gift_banner {
+    height: 440px;
+    background-size: 150%;
+    background-repeat: no-repeat;
+    background-position: 60% 50%;
+  }
+  #gift_banner .text h1 {
+    font-size: 1.75em;
+  }
+  #style #style_box {
+    grid-column: span 8;
+    display: grid;
+    grid-template-columns: repeat(2, 4fr);
+    gap: 24px;
+  }
+  #style > .style_top {
+    grid-column: span 8;
+  }
+  #style .style_top .button {
+    width: 200px;
+    height: 60px;
+    border-radius: 30px;
+  }
+  #style #style_box .style_box {
+    grid-column: span 1;
+  }
+  #style #style_box .style_box .bg {
+    width: 100%;
+    height: 320px;
+    object-fit: cover;
+    object-position: 0% 50%;
+  }
+  #campaign .campaign_box {
+    align-items: center;
+  }
+  #campaign .box1 > img {
+    object-position: 0 50%;
+  }
+  #campaign .campaign_box > img {
+    width: 120px;
+    height: 240px;
+    object-fit: contain;
+  }
+  /* 코안다 영상 */
+  #tech {
+    margin-top: 36px;
+    height: 480px;
+  }
+  #style #style_box .style_box .text p {
+    width: fit-content;
+    font-size: 1em;
+  }
+  #style #style_box .style_box .product {
+    width: 60px;
+    bottom: 0;
+    object-fit: cover;
+  }
+  #style #style_box .style_box:nth-of-type(3) .product {
+    width: 70px;
+    object-position: 0 30px;
+  }
+  #campaign > h1 {
+    grid-column: span 8;
+  }
+  #tool .text p {
+    font-size: 1em;
+  }
+  #tool .text h1 {
+    font-size: 1.75em;
+    margin-bottom: 32px;
+    letter-spacing: -0.025em;
+  }
+  #campaign .campaign_box {
+    grid-column: span 4;
+    height: 240px;
+    padding: 0px 12px;
+    gap: 16px;
+    border-radius: 16px;
+  }
+  #tool_wrap {
+    padding: 52px 0;
+  }
+  #tool .tool_img > ul {
+    gap: 0px;
+  }
+  #tool .tool_img > ul > li {
+    width: 70px;
+  }
+}
+
+/*모바일 가로 & 태블릿 세로 : 480px-767px*/
+
+@media all and (min-width: 480px) and (max-width: 767px) {
+  .container {
+    width: 100%;
+    margin: 0;
+    padding: 0 20px;
+    box-sizing: border-box;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+  }
+  #category_sel {
+    width: 100%;
+  }
+  #category_sel .select {
+    box-sizing: border-box;
+    margin: 30px auto;
+  }
+  #category_sel .select > ul {
+    grid-column: span 4;
+    height: fit-content;
+    display: flex;
+    gap: 12px;
+  }
+  #category_sel .select > ul > li {
+    width: 100%;
+    padding-bottom: 30px;
+    aspect-ratio: 1 / 1;
+    background-color: rgba(255, 255, 255, 0);
+    /* 지우기 */
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: start;
+    justify-content: center;
+  }
+  #category_sel .select > ul > li > a {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    border-radius: 32%;
+    border: 1px solid #ddd;
+    overflow: hidden;
+    display: block;
+    align-items: center;
+    transition: none;
+    background-color: #fff;
+  }
+  #category_sel .select > ul > li > a > h1 {
+    display: none;
+  }
+  #category_sel .select > ul > li > a > h2 {
+    display: block;
+    position: absolute;
+    width: 100%;
+    margin-top: 8px;
+    text-align: center;
+    font-size: 1em;
+    font-weight: 600;
+    text-wrap: nowrap;
+  }
+  #category_sel .select > ul > li > a > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    margin-top: 0px;
+    filter: sepia(0) !important;
+    opacity: 1 !important;
+    box-shadow: 1px 10px rgba(0, 0, 0, 0.5);
+  }
+
+  #gift_banner {
+    height: 400px;
+    background-size: 160%;
+    background-repeat: no-repeat;
+    background-position: 70% 50%;
+    padding: 0px;
+  }
+  #gift_banner #gift_banner_inner {
+    grid-column: span 4;
+    height: 100%;
+  }
+  #gift_banner .text {
+    padding: 110px 20px;
+  }
+  #gift_banner .text h1 {
+    font-size: 1.5em;
+  }
+  #style {
+    margin-top: 50px;
+  }
+  #style #style_box {
+    grid-column: span 4;
+    display: grid;
+    grid-template-columns: repeat(2, 4fr);
+    gap: 24px;
+  }
+  #style > .style_top {
+    grid-column: span 4;
+  }
+  #style .style_top .button {
+    width: 180px;
+    height: 60px;
+    border-radius: 30px;
+  }
+  #style .style_top .button > a {
+    font-size: 0.9em;
+  }
+  #style #style_box .style_box {
+    grid-column: span 4;
+  }
+  #style #style_box .style_box .bg {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    object-position: 0% 50%;
+  }
+
+  #style #style_box .style_box .text {
+    margin-top: 8px;
+  }
+  #style #style_box .style_box .text p {
+    width: fit-content;
+    font-size: 1em;
+  }
+  #style #style_box .style_box .product {
+    width: 70px;
+    bottom: 0;
+    object-fit: cover;
+  }
+  #style #style_box .style_box:nth-of-type(3) .product {
+    width: 80px;
+    object-position: 0 30px;
+  }
+  #campaign > h1 {
+    grid-column: span 4;
+    margin-bottom: 24px;
+  }
+  #campaign .campaign_box {
+    grid-column: span 4;
+    height: 240px;
+    padding: 0px 24px;
+    gap: 24px;
+    border-radius: 16px;
+    align-items: center;
+    overflow: hidden;
+  }
+  #campaign .campaign_box.campaign_box:first-of-type {
+    margin-bottom: 12px;
+  }
+  #campaign .box1 > img {
+    display: inline-block;
+    width: 200px;
+    height: 240px;
+    object-fit: cover;
+    object-position: 0 85px;
+  }
+  #campaign .campaign_box > img {
+    width: 150px;
+    height: 240px;
+    object-fit: contain;
+  }
+  /* 코안다 영상 */
+  #tech {
+    margin-top: 32px;
+    display: flex;
+    height: 480px;
+  }
+  #tool_wrap {
+    padding: 52px 0;
+  }
+  #tool .text p {
+    font-size: 1em;
+  }
+  #tool .text h1 {
+    width: 380px;
+    margin: 0 auto;
+    font-size: 1.5em;
+    line-height: 1.5em;
+    text-wrap: wrap;
+    margin-bottom: 24px;
+    letter-spacing: -0.025em;
+  }
+  #tool .tool_img > ul {
+    gap: 0px;
+  }
+  #tool .tool_img > ul > li {
+    width: 70px;
+  }
+}
+
+/*모바일 : -479px*/
+
+@media all and (max-width: 479px) {
+  .container {
+    width: 100%;
+    min-width: 375px;
+    margin: 0;
+    padding: 0 16px;
+    box-sizing: border-box;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+  }
+
+  #chat_bot > #ad_banner {
+    display: none;
+  }
+  #category_sel {
+    width: 100%;
+  }
+  #category_sel .select {
+    box-sizing: border-box;
+    margin: 30px auto;
+  }
+  #category_sel .select > ul {
+    grid-column: span 2;
+    height: fit-content;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    text-align: center;
+    gap: 8px;
+    row-gap: 16px;
+  }
+  /* 2번째 줄 밀림 방지 */
+  #category_sel .select > ul::after {
+    content: "";
+    width: 25%;
+  }
+  #category_sel .select > ul > li {
+    width: 25%;
+    padding-bottom: 30px;
+    aspect-ratio: 1 / 1;
+    background-color: rgba(255, 255, 255, 0);
+    /* 지우기 */
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: start;
+    justify-content: center;
+  }
+  #category_sel .select > ul > li > a {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    border-radius: 32%;
+    border: 1px solid #ddd;
+    overflow: hidden;
+    display: block;
+    align-items: center;
+    transition: none;
+    background-color: #fff;
+  }
+  #category_sel .select > ul > li > a > h1 {
+    display: none;
+  }
+  #category_sel .select > ul > li > a > h2 {
+    display: block;
+    position: absolute;
+    width: 100%;
+    margin-top: 8px;
+    text-align: center;
+    font-size: 1em;
+    font-weight: 600;
+    text-wrap: nowrap;
+  }
+  #category_sel .select > ul > li > a > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    margin-top: 0px;
+    filter: sepia(0) !important;
+    opacity: 1 !important;
+    box-shadow: 1px 10px rgba(0, 0, 0, 0.5);
+  }
+  #campaign .campaign_box .text img {
+    height: 20px;
+    object-fit: cover;
+    margin-bottom: 8px;
+  }
+  #campaign .campaign_box .text h1 {
+    font-size: 1.25em;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 0px;
+    text-wrap: nowrap;
+  }
+
+  #campaign .campaign_box .text p {
+    display: none;
+  }
+
+  #gift_banner {
+    width: 100%;
+    height: 320px;
+    background-size: 170%;
+    background-repeat: no-repeat;
+    background-position: 70% 120%;
+    padding: 0px;
+  }
+  #gift_banner #gift_banner_inner {
+    width: 100%;
+    height: 100%;
+  }
+  #gift_banner .text {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding: 80px 0 80px 0px;
+    text-align: center;
+  }
+  #gift_banner .text h1 {
+    width: 100%;
+    font-size: 1.2em;
+  }
+  #gift_banner .text p {
+    width: 100%;
+  }
+  #gift_banner .text .button {
+    margin: auto;
+  }
+  #style {
+    margin-top: 50px;
+  }
+  #style #style_box {
+    grid-column: span 2;
+    display: grid;
+    grid-template-columns: repeat(2, 4fr);
+    gap: 24px;
+  }
+  #style > .style_top {
+    grid-column: span 2;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    margin-bottom: 12px;
+  }
+  #style .style_top .text {
+    width: 100%;
+    padding-bottom: 28px;
+  }
+  #style .style_top .text h1 {
+    width: fit-content;
+    font-size: 1.5em;
+    font-weight: 700;
+    margin-bottom: 16px;
+  }
+  #style .style_top .text p {
+    width: 100%;
+  }
+  #style .style_top .button {
+    width: fit-content;
+    height: fit-content;
+    border-radius: 0px;
+    padding: 0px;
+    border: none;
+    border-radius: 0px;
+    box-sizing: border-box;
+    margin-left: 0px;
+    position: absolute;
+    right: 0;
+    bottom: 0px;
+    margin-right: 18px;
+  }
+  #style .style_top .button > a {
+    font-size: 1em;
+    font-weight: bold;
+    color: #3f3f3f;
+    text-decoration: underline;
+    position: relative;
+  }
+  #style .style_top .button > a::after {
+    content: "";
+    width: 24px;
+    height: 24px;
+    display: block;
+    position: absolute;
+    right: -24px;
+    background-image: url(../img/icon/right-24-black.svg);
+  }
+  #style #style_box .style_box {
+    grid-column: span 2;
+  }
+  #style #style_box .style_box .bg {
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+    object-position: 0% 50%;
+  }
+
+  #style #style_box .style_box .text {
+    margin-top: 12px;
+  }
+  #style #style_box .style_box .text h1 {
+    font-size: 1em;
+    margin-bottom: 12px;
+  }
+  #style #style_box .style_box .text p {
+    width: fit-content;
+    font-size: 0.9em;
+  }
+  #style #style_box .style_box .product {
+    width: 70px;
+    bottom: 0;
+    object-fit: cover;
+  }
+  #style #style_box .style_box:nth-of-type(3) .product {
+    width: 80px;
+    object-position: 0 30px;
+  }
+  #campaign {
+    height: fit-content;
+    margin-top: 60px;
+  }
+  #campaign > h1 {
+    grid-column: span 2;
+    margin-bottom: 12px;
+  }
+  #campaign .campaign_box {
+    grid-column: span 2;
+    height: 160px;
+    padding: 0px 12px;
+    gap: px;
+    border-radius: 16px;
+  }
+  #campaign .campaign_box:first-of-type {
+    margin-bottom: 12px;
+  }
+  #campaign .campaign_box {
+    align-items: center;
+    overflow: hidden;
+  }
+  #campaign .box1 > img {
+    display: inline-block;
+    width: 200px;
+    height: 240px;
+    object-fit: cover;
+    object-position: 0 20px;
+  }
+  #campaign .campaign_box > img {
+    width: 40%;
+    height: 100%;
+    object-fit: contain;
+  }
+  /* 코안다 영상 */
+  #tech {
+    margin-top: 40px;
+    display: flex;
+    height: 300px;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+  #tech video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  #tool_wrap {
+    padding: 40px 0;
+  }
+  #tool .text p {
+    font-size: 1em;
+  }
+  #tool .text h1 {
+    width: 70%;
+    padding: 0 12px;
+    box-sizing: border-box;
+    margin: 0 auto;
+    font-size: 1.25em;
+    line-height: 1.5em;
+    text-wrap: wrap;
+    margin-bottom: 24px;
+    letter-spacing: -0.025em;
+  }
+  #tool .text button {
+    width: 200px;
+    height: 52px;
+    color: #333;
+    font-size: 0.9em;
+  }
+
+  #tool .tool_img > ul {
+    gap: 0px;
+    margin-top: 0px;
+  }
+  #tool .tool_img > ul > li {
+    width: 70px;
+  }
+}

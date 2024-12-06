@@ -1,0 +1,175 @@
+@charset "UTF-8";
+
+/* 반응형 그리드 미디어 쿼리 container 틀입니다 */
+
+/* 현재 컨테이너 1441px-1920px 까지 대응 */
+.container {
+  max-width: 1440px;   /* 최대 컨테이너 너비 */
+  width: 100%;   /* 100% 너비를 사용하여 반응형 구현 */
+  padding: 0 50px;   /* 양 옆 50px 패딩 */
+  box-sizing: border-box;
+  margin: 0 auto;   /* 가운데 정렬 */
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);   /* 12개의 칼럼 생성 */
+  gap: 24px;   /* 칼럼 간의 간격 24px */
+}
+
+/* 1440px → w:100%로 고정, margin:auto 빼기 */
+/* 노트북 : 1024px -1440px */
+@media (min-width: 1024px) and (max-width: 1440px) {
+  .container {
+    width: 100%;     /* 1440px에서 변경 */
+    margin: 0;
+    padding: 0 50px;
+    box-sizing: border-box;
+    gap: 24px;
+    grid-template-columns: repeat(8, 1fr);
+  }
+
+  #product_grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  #top_fitter {
+    display: none;
+  }
+
+  .s2_c_left {
+    display: flex;
+  }
+
+  .c_a1, .c_b1, .c_c1 {
+    max-width: 45%;
+    width: 200px;
+    display: block;
+    margin: 0 50px;
+    padding: 0;
+  }
+}
+
+
+
+
+/* 태블릿 가로 : 769px-1023px */
+@media all and (min-width: 768px) and (max-width: 1023px) {
+  .container {
+    width: 100%;
+    margin: 0;
+    padding: 0 32px;
+    box-sizing: border-box;
+    grid-template-columns: repeat(8, 1fr);
+    gap: 16px;
+  }
+
+  #product_grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  #top_fitter {
+    display: none;
+  }
+
+
+
+  .s2_c_left {
+    display: flex;
+  }
+
+  .c_a1, .c_b1, .c_c1{
+    max-width: 45%;
+    width: 200px;
+    height: auto;
+    display: block;
+    margin: 0 50px;
+    padding: 0;
+  }
+
+
+}
+
+/* 모바일 가로 & 태블릿 세로 : 480px-767px */
+@media all and (min-width: 480px) and (max-width: 767px) {
+  body {width: 100%;}
+  .container {
+    width: 100%;
+    margin: 0;
+    padding: 0 20px;
+    box-sizing: border-box;
+    grid-template-columns: repeat(8, 1fr);
+    gap: 12px;
+  }
+
+  #product_grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  #top_fitter {
+    display: none;
+  }
+
+  .s2_c_left {
+    display: flex;
+  }
+
+  .c_a1, .c_b1, .c_c1{
+    max-width: 45%;
+    width: 100px;
+    height: auto;
+    display: block;
+    margin: 0 50px;
+    padding: 0;
+    font-size: 0.94em;
+  }
+}
+
+/* 모바일 : -479px */
+@media all and (max-width: 479px) {
+  .container {
+    min-width: 375px;
+    width: 100%;
+    margin: 0;
+    padding: 0 16px;
+    box-sizing: border-box;
+    grid-template-columns: repeat(8, 1fr);
+    gap: 8px;
+  }
+
+
+
+  #product_grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  #top_fitter {
+    display: none;
+  }
+
+  .s2_c_left {
+    display: none
+  }
+
+  .c_a1, .c_b1, .c_c1{
+    max-width: 45%;
+    width: 100px;
+    height: auto;
+    display: block;
+    margin: 0 50px;
+    padding: 0;
+    font-size: 0.8em;
+  }
+
+  .c_b1 label, .c_c1 label{
+    font-size: 0.6em;
+  }
+
+  .c_a1_select_box{
+    width: 100px;
+  }
+
+  .c_a1_select_box > p {
+    font-size: 0.4em;  }
+}

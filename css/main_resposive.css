@@ -1,0 +1,1401 @@
+@charset "UTF-8";
+@media (max-width: 1700px) {
+  #style {
+    background-size: cover;
+    background-position: 80% 100%;
+  }
+}
+/* 노트북 : 1024px -1440px */
+
+@media (min-width: 1024px) and (max-width: 1440px) {
+  .container {
+    width: 100%; /* 1440px에서 변경 */
+    margin: 0;
+    padding: 0;
+    padding: 0 50px;
+    box-sizing: border-box;
+    gap: 24px;
+  }
+  /* main 블랙 프라이데이 */
+  #blkfriday {
+    background-size: cover;
+    background-position: 70% 0;
+  }
+  /* main #style */
+  #style {
+    background-size: cover;
+    height: 500px;
+    background-position: 90% 100%;
+    position: relative;
+  }
+  #style > .title_wrap {
+    text-align: left;
+  }
+  #style::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(#ffffff00 0%, #ffffff36 50%, #ffffff 90%);
+  }
+  #style_inner {
+    height: 100%;
+  }
+  #style_inner > #style_slider {
+    height: 290px;
+    width: 100%;
+    height: calc(280px + 32px);
+    position: relative;
+    overflow: visible;
+    position: relative;
+  }
+  #style_inner > #style_slider > ul {
+    width: 1200px;
+    grid-template-columns: repeat(6, 1fr);
+    position: absolute;
+    right: 0;
+  }
+  #style_inner > #style_slider > ul > li {
+    width: 200px;
+    float: left;
+    margin-right: auto;
+  }
+  #style_inner > #style_slider > #style_slider_fixed {
+    background-position: 60% 50%;
+    position: absolute;
+    top: 100%;
+    right: 26px;
+  }
+  #style_inner > #style_slider2 {
+    grid-column: span 4;
+    height: 480px;
+    display: flex;
+    justify-content: start;
+  }
+  #style_inner > #style_slider2 > ul > li {
+    width: span 4;
+    height: 100%;
+    padding: 180px 00px 100px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: 0.5s all ease-in-out;
+    z-index: -1;
+    opacity: 0;
+  }
+  .style_box {
+    text-align: center;
+    align-items: center;
+  }
+  .style_box > h3 {
+    width: 90%;
+    letter-spacing: -0.05em;
+    text-align: left;
+    text-shadow: 0 0 20px #fff, 0 0 4px #fff;
+    margin-bottom: 12px;
+  }
+  .style_box > p {
+    width: 90%;
+    text-align: justify;
+    font-size: 1em;
+    line-height: 1.8em;
+    text-shadow: 0 0 16px #fff, 0 0 2px #fff;
+  }
+  .style_box > .btn_box {
+    width: 100%;
+    display: flex;
+    /* justify-content: space-between; */
+    gap: 8px;
+    height: 48px;
+    margin-top: 8px;
+  }
+  .style_box > .btn_box > button {
+    width: 170px;
+    height: 48px;
+    background: none;
+    border: none;
+  }
+
+  #style_inner > #style_slider > #style_slider_btn {
+    width: 140px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: absolute;
+    z-index: 2;
+    top: 50%;
+    margin-top: 40px;
+    right: -10px;
+  }
+  /* 이벤트 */
+  #event > .main_title {
+    padding: 0 50px;
+  }
+  #event .main_title_sub {
+    padding: 0 50px;
+  }
+  /* main #gift */
+  #giftshop_slider_prev {
+    left: -40px;
+    background-image: url(../img/icon/left-80-black.svg);
+  }
+  #giftshop_slider_next {
+    right: -40px;
+    background-image: url(../img/icon/right-80-black.svg);
+  }
+  #map_search_box {
+    width: calc((100% / 12) * 6);
+    background: white;
+    padding: 30px 40px;
+    box-sizing: border-box;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 50%;
+    margin-top: calc(-320px / 2);
+    right: 24px;
+    z-index: 10;
+  }
+  #support > #support_inner > li {
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+  }
+
+  #support > #support_inner > li > a {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    justify-content: center;
+    gap: 16px;
+  }
+  #support > #support_inner > li > a > img {
+    display: block;
+    width: 50%;
+    height: 50%;
+    object-fit: cover;
+  }
+}
+
+/* gift 영역 깨짐 해결 */
+
+@media (min-width: 1120px) and (max-width: 1430px) {
+  #giftshop > #giftshop_inner > #giftshop_bottom > #giftshop_slider_wrap {
+    width: calc(341px * 3);
+    margin: 0 auto;
+  }
+}
+@media (min-width: 1023px) and (max-width: 1110px) {
+  #giftshop > #giftshop_inner > #giftshop_bottom {
+    width: 100%;
+    height: 487px;
+    position: relative;
+    margin-top: 40px;
+  }
+  #giftshop > #giftshop_inner > #giftshop_bottom > #giftshop_slider_wrap {
+    width: 930px;
+    margin: 0 auto;
+  }
+  #giftshop
+    > #giftshop_inner
+    > #giftshop_bottom
+    > #giftshop_slider_wrap
+    > #giftshop_slider
+    > li {
+    margin-right: 8px;
+  }
+  #giftshop
+    > #giftshop_inner
+    > #giftshop_bottom
+    > #giftshop_slider_wrap
+    > #giftshop_slider
+    > li:nth-of-type(3n) {
+    margin-left: -6px;
+    margin-left: -8px;
+  }
+  .product_list {
+    width: 302px;
+    padding: 14px 14px;
+  }
+  #giftshop_slider_prev {
+    left: -48px;
+    background-image: url(../img/icon/left-80-black.svg);
+  }
+  #giftshop_slider_next {
+    right: -48px;
+    background-image: url(../img/icon/right-80-black.svg);
+  }
+}
+
+/*태블릿 가로 : 769px-1023px*/
+
+@media all and (min-width: 768px) and (max-width: 1023px) {
+  .container {
+    width: 100%;
+    margin: 0;
+    padding: 0 32px;
+    overflow: visible;
+    box-sizing: border-box;
+    grid-template-columns: repeat(8, 1fr);
+    gap: 16px;
+  }
+
+  /* 블랙프라이데이 */
+  #blkfriday {
+    background-size: cover;
+    background-position: 80% 0;
+    padding: 100px 0;
+  }
+  #blk_inner > button .blk_btn {
+    font-size: 1em;
+  }
+  #category_wrap {
+    width: 100%;
+    height: fit-content;
+    overflow: hidden;
+  }
+
+  /* 카테고리 */
+  #category {
+    height: 360px;
+    margin-top: 60px;
+    position: relative;
+    /* overflow: visible; */
+    display: flex;
+    position: relative;
+  }
+
+  #category_inner {
+    width: calc(100% - 50px);
+    width: 360px;
+    height: fit-content;
+    height: inherit;
+    overflow: visible;
+    position: absolute;
+    left: 32px;
+  }
+  #category_inner li {
+    width: 360px;
+    height: 360px;
+    float: left;
+    box-sizing: border-box;
+    background-color: #f1f1f1;
+    position: relative;
+    overflow: hidden;
+  }
+
+  /* main> #style */
+  #style {
+    height: fit-content;
+    background-size: contain;
+    background-image: none !important;
+  }
+  #style > .title_wrap {
+    width: 100%;
+    padding: 0 32px;
+    text-align: left;
+    margin-bottom: 0px;
+  }
+  #style_inner {
+    display: flex;
+    flex-direction: column;
+    grid-template-columns: none;
+  }
+  /* 기존 슬라이더 제거 */
+  #style_inner > #style_slider {
+    display: none;
+  }
+
+  /* 모바일 스와이프 슬라이더 시작 ------ slick 플러그인 사용*/
+  #style_inner > #style_slider_mobile {
+    display: block;
+    width: 100%;
+    height: 320px;
+    /* overflow: scroll; */
+  }
+  #style_inner > #style_slider_mobile ul {
+    position: relative;
+  }
+  /* 슬릭 전 후 버튼 */
+  #style_slider_mobile .slick-arrow {
+    width: calc(50% - 60px + 32px);
+    content: " ";
+    height: 100%;
+    background-color: #ffffff31;
+    color: #00000000;
+    border: none;
+    position: absolute;
+    top: 0;
+    z-index: 2;
+  }
+  #style_slider_mobile .slick-prev {
+    left: -32px;
+    cursor: pointer;
+  }
+  #style_slider_mobile .slick-next {
+    position: absolute;
+    top: 0;
+    right: -32px;
+    cursor: pointer;
+  }
+  #style_slider_mobile .slick-track {
+    display: block;
+    display: flex;
+    gap: 40px;
+  }
+  #style_slider_mobile li {
+    width: 80px;
+    height: 100%;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    opacity: 0.5;
+    color: #b6b6b6;
+    transition: 1s all ease-in-out;
+  }
+  #style_slider_mobile li.slick-active {
+    opacity: 1 !important;
+    color: #333 !important;
+  }
+
+  #style_inner > #style_slider_mobile ul li.active {
+    opacity: 1;
+    color: #333;
+  }
+  #style_inner > #style_slider_mobile ul li p {
+    font-size: 0.8em;
+    font-weight: 700;
+    letter-spacing: -0.05em;
+    text-align: center;
+    line-height: 1.25em;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 16px;
+  }
+  #style_inner > #style_slider_mobile ul li div {
+    width: 100%;
+    height: 280px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: 50% 0%;
+  }
+  #style_inner > #style_slider_mobile_mobile ul {
+    width: 1200px;
+    height: 320px;
+    display: flex;
+    justify-content: space-between;
+    box-sizing: border-box;
+    position: absolute;
+    left: -48px;
+  }
+
+  #style_inner > #style_slider2 {
+    width: calc(100% + 64px);
+    height: 300px;
+    position: relative;
+    right: -32px;
+  }
+  #style_inner > #style_slider2 > ul {
+    margin-left: -32px;
+    position: relative;
+  }
+  #style_inner > #style_slider2 > ul > li {
+    width: 100%;
+    height: 100%;
+    padding: 60px 0px 140px;
+    background-image: url(../img/main/style2-9.png);
+    background-size: 130%;
+    background-repeat: no-repeat;
+    background-position: 130% 0%;
+    position: absolute;
+  }
+  #style_inner > #style_slider2 > ul > li.active {
+    display: none;
+  }
+  #style_inner > #style_slider2 > ul > li.active2 {
+    display: block;
+    z-index: 1;
+    opacity: 1;
+  }
+  .style_box > p {
+    width: 50%;
+  }
+  .style_box > .btn_box {
+    position: absolute;
+    left: 0;
+    bottom: 52px;
+    display: flex;
+    gap: 16px;
+  }
+  .style_box > .btn_box > button {
+    padding: 0;
+  }
+
+  /* main>#event */
+  #event > .main_title {
+    padding: 0 32px;
+  }
+  #event .main_title_sub {
+    padding: 0 32px;
+  }
+  #event > #event_wrapper {
+    grid-column: span 12;
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    gap: 16px;
+    margin-top: 24px;
+  }
+  #event > #event_wrapper > div {
+    grid-column: span 4;
+  }
+
+  /* main>#giftshop */
+  #giftshop > #giftshop_inner > #giftshop_top > ul {
+    width: 70%;
+    height: 100%;
+    display: flex;
+    gap: 12px;
+  }
+
+  #giftshop > #giftshop_inner > #giftshop_bottom > #giftshop_slider_wrap {
+    width: calc(100% + 32px);
+  }
+
+  #giftshop
+    > #giftshop_inner
+    > #giftshop_bottom
+    > #giftshop_slider_wrap
+    > #giftshop_slider {
+    gap: 16px;
+    overflow: visible;
+  }
+
+  .product_list {
+    width: 298px;
+  }
+
+  .product_list > .product_img {
+    width: 100%;
+    height: 309px;
+    position: relative;
+  }
+
+  .product_list > .product_img > img {
+    width: 309px;
+    height: 309px;
+    object-fit: contain;
+  }
+
+  .giftshop_slider_btn {
+    display: none;
+  }
+  /* main #map */
+  #map > .container {
+    padding: 0 32px;
+    box-sizing: border-box;
+    grid-column: span 12;
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    gap: 16px;
+    position: static;
+    padding-top: 200px;
+  }
+  #map iframe {
+    width: 100%;
+    height: 360px;
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+  #map_search_box {
+    grid-column: span 8;
+    height: 320px;
+    background: white;
+    padding: 40px 30px;
+    position: static;
+    top: 50%;
+    margin-top: 0;
+    right: 0;
+    z-index: 10;
+  }
+  #map_search_box > #map_inner_bottom {
+    gap: 24px;
+  }
+  #map_search_box > #map_inner_bottom > input {
+    width: 100%;
+    height: 56px;
+    padding-left: 16px;
+  }
+  #map_search_box > #map_inner_bottom > button {
+    width: 120px;
+  }
+
+  /* main >#support */
+
+  #support {
+    margin-top: 60px;
+  }
+  #support > #support_inner {
+    grid-column: span 8;
+    height: fit-content;
+    display: grid;
+    gap: 16px;
+    grid-template-columns: repeat(8, 1fr);
+  }
+  #support > #support_inner {
+    grid-column: span 8;
+    gap: 16px;
+    grid-template-columns: repeat(8, 1fr);
+  }
+  #support > #support_inner > li {
+    grid-column: span 2;
+    padding: 0px;
+  }
+  #support > #support_inner > li > a {
+    display: flex;
+    padding: 0;
+    gap: 8px;
+    align-items: center;
+    justify-content: center;
+  }
+  #support > #support_inner > li > a > img {
+    width: 50%;
+    height: 50%;
+    object-fit: contain;
+  }
+}
+/*모바일 가로 & 태블릿 세로 : 480px-767px*/
+
+@media all and (min-width: 480px) and (max-width: 767px) {
+  .container {
+    width: 100%;
+    margin: 0;
+    padding: 0 20px;
+    box-sizing: border-box;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+  }
+
+  /* 블랙프라이데이 */
+  #blkfriday {
+    padding: 100px 0;
+    background-image: url(../img/blackfriday.jpg);
+    background-size: cover;
+    background-position: 80% 0;
+  }
+  #blkfriday > #blk_inner > span {
+    width: 200px;
+    height: 200px;
+    top: 100%;
+    margin-top: -120px;
+  }
+  /* 카테고리 */
+  #category {
+    height: 300px;
+    margin-top: 60px;
+    position: relative;
+    /* overflow: visible; */
+    display: flex;
+    position: relative;
+  }
+
+  #category_inner {
+    width: calc(100% - 50px);
+    width: 300px;
+    left: 12px;
+    height: 300px;
+  }
+  #category_inner li {
+    width: 300px;
+    height: 300px;
+  }
+  #category_inner li > a > img {
+    height: 95%;
+    transform: translateX(120px);
+    bottom: 0;
+  }
+
+  /* main> #style */
+  #style {
+    height: fit-content;
+    background-size: contain;
+    background-image: none !important;
+  }
+  #style > .title_wrap {
+    width: 100%;
+    padding: 0 12px;
+    text-align: left;
+  }
+  #style_inner {
+    margin-top: 12px;
+    display: flex;
+    flex-direction: column;
+    grid-template-columns: none;
+  }
+  /* 기존 슬라이더 제거 */
+  #style_inner > #style_slider {
+    display: none;
+  }
+
+  /* 모바일 스와이프 슬라이더 시작 ------ slick 플러그인 사용*/
+  #style_inner > #style_slider_mobile {
+    display: block;
+    width: 100%;
+    height: 320px;
+    position: relative;
+  }
+  /* 슬릭 전 후 버튼 */
+  #style_slider_mobile .slick-arrow {
+    width: calc(50% - 80px + 20px);
+    content: " ";
+    height: 100%;
+    background-color: #ffffff31;
+    color: #00000000;
+    border: none;
+    position: absolute;
+    top: 0;
+    z-index: 2;
+  }
+  #style_slider_mobile .slick-prev {
+    left: -20px;
+    cursor: pointer;
+  }
+  #style_slider_mobile .slick-next {
+    position: absolute;
+    top: 0;
+    right: -20px;
+    cursor: pointer;
+  }
+  #style_slider_mobile .slick-track {
+    display: flex;
+    gap: 20px;
+  }
+  #style_slider_mobile li {
+    width: 80px;
+    height: 100%;
+    padding: 0 10px;
+    display: flex;
+    flex-direction: column;
+    opacity: 0.5;
+    color: #b6b6b6;
+    transition: 1s all ease-in-out;
+  }
+  #style_slider_mobile li.slick-active {
+    opacity: 1 !important;
+    color: #333 !important;
+  }
+
+  #style_inner > #style_slider_mobile ul li.active {
+    opacity: 1;
+    color: #333;
+  }
+  #style_inner > #style_slider_mobile ul li p {
+    font-size: 0.8em;
+    font-weight: 700;
+    letter-spacing: -0.05em;
+    text-align: center;
+    line-height: 1.25em;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 16px;
+  }
+  #style_inner > #style_slider_mobile ul li div {
+    width: 100%;
+    height: 280px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: 50% 0%;
+  }
+  #style_inner > #style_slider_mobile_mobile ul {
+    width: 1200px;
+    height: 320px;
+    display: flex;
+    justify-content: space-between;
+    box-sizing: border-box;
+    position: absolute;
+    left: -48px;
+  }
+
+  #style_inner > #style_slider2 {
+    width: calc(100% + 64px);
+    height: 300px;
+    position: relative;
+    right: -32px;
+    margin-top: 20px;
+  }
+  #style_inner > #style_slider2 > ul {
+    margin-left: -32px;
+    position: relative;
+  }
+  #style_inner > #style_slider2 > ul > li {
+    width: 100%;
+    height: 100%;
+    padding: 40px 0px 140px;
+    background-image: url(../img/main/style2-9.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 100% 0%;
+    position: absolute;
+  }
+  #style_inner > #style_slider2 > ul > li.active {
+    display: none;
+  }
+  #style_inner > #style_slider2 > ul > li.active2 {
+    display: block;
+    z-index: 1;
+    opacity: 1;
+  }
+  .style_box > p {
+    width: 50%;
+  }
+  .style_box > .btn_box {
+    position: absolute;
+    left: 0;
+    bottom: 52px;
+    display: flex;
+    gap: 16px;
+  }
+  .style_box > .btn_box > button {
+    padding: 0;
+  }
+  /* main>#event */
+  #event {
+    height: fit-content;
+  }
+  #event > .main_title {
+    padding: 0 20px;
+  }
+  #event .main_title_sub {
+    padding: 0 20px;
+  }
+  #event > #event_wrapper {
+    grid-column: span 12;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+    margin-top: 24px;
+  }
+
+  #event > #event_wrapper > div {
+    grid-column: span 4;
+    height: 180px;
+    border-radius: 16px;
+  }
+  #event > #event_wrapper > div > a > img {
+    width: 40%;
+    height: 100%;
+    object-fit: contain;
+  }
+  #event > #event_wrapper > div > a > div > h3 {
+    font-size: 1.25em;
+  }
+
+  /* 기프트샵 */
+  #giftshop {
+    display: flex;
+    height: fit-content;
+    margin: 60px auto 60px;
+  }
+  #giftshop > #giftshop_inner {
+    height: fit-content;
+  }
+  #giftshop > #giftshop_inner > #giftshop_top {
+    grid-column: span 12;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+  }
+  #giftshop > #giftshop_inner > #giftshop_top > h2 {
+    width: 100%;
+    margin-bottom: 0;
+  }
+  #giftshop > #giftshop_inner > #giftshop_top > ul {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    gap: 16px;
+    justify-content: start;
+    margin-top: 20px;
+  }
+  #giftshop > #giftshop_inner > #giftshop_top > ul > li {
+    width: 25%;
+    height: 56px;
+  }
+  #giftshop > #giftshop_inner > #giftshop_top > ul > li > a {
+    padding: 0;
+  }
+  /* main>#giftshop */
+  #giftshop > #giftshop_inner > #giftshop_bottom {
+    height: fit-content;
+    position: relative;
+    margin: 0;
+    margin-top: 0px;
+  }
+  #giftshop > #giftshop_inner > #giftshop_bottom > #giftshop_slider_wrap {
+    width: calc(100% + 20px);
+    overflow-x: scroll;
+    overflow-y: hidden;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* Internet Explorer 10+ */
+  }
+
+  #giftshop
+    > #giftshop_inner
+    > #giftshop_bottom
+    > #giftshop_slider_wrap
+    ::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Edge */
+  }
+
+  #giftshop
+    > #giftshop_inner
+    > #giftshop_bottom
+    > #giftshop_slider_wrap
+    > #giftshop_slider {
+    gap: 16px;
+    overflow: visible;
+  }
+
+  .product_list {
+    width: 298px;
+  }
+
+  .product_list > .product_img {
+    width: 100%;
+    height: 309px;
+    position: relative;
+  }
+
+  .product_list > .product_img > img {
+    width: 309px;
+    height: 309px;
+    object-fit: contain;
+  }
+  /* main #map */
+  #map {
+    height: fit-content;
+  }
+  #map > .container {
+    padding: 0 32px;
+    box-sizing: border-box;
+    grid-column: span 12;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+    position: static;
+    padding-top: 200px;
+  }
+  #map iframe {
+    width: 100%;
+    height: 360px;
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+  #map_search_box {
+    grid-column: span 4;
+    height: fit-content;
+    background: white;
+    padding: 40px 30px;
+    position: static;
+    top: 50%;
+    margin-top: 0;
+    right: 0;
+    z-index: 10;
+    box-sizing: border-box;
+  }
+  #map_search_box > #map_inner_top > h2 > a {
+    font-size: 1.75em;
+    font-weight: 900;
+  }
+  #map_search_box > #map_inner_top > p {
+    margin-top: 24px;
+    line-height: 1.5em;
+    letter-spacing: 0em;
+  }
+  #map_search_box > #map_inner_bottom {
+    gap: 0;
+    display: block;
+  }
+  #map_search_box > #map_inner_bottom > input {
+    width: 100%;
+    height: 56px;
+    padding-left: 16px;
+  }
+  #map_search_box > #map_inner_bottom > button {
+    width: 100%;
+    height: 60px;
+    margin-top: 24px;
+  }
+
+  /* main >#support */
+
+  #support {
+    margin-top: 60px;
+  }
+  #support > #support_inner {
+    grid-column: span 8;
+    height: fit-content;
+    display: grid;
+    gap: 12px;
+    grid-template-columns: repeat(8, 1fr);
+  }
+  #support > #support_inner {
+    grid-column: span 4;
+    gap: 16px;
+    grid-template-columns: repeat(4, 1fr);
+  }
+  #support > #support_inner > li {
+    grid-column: span 2;
+    padding: 12px;
+    box-sizing: border-box;
+  }
+  #support > #support_inner > li > a {
+    display: flex;
+    padding: 0;
+    gap: 8px;
+    align-items: center;
+    justify-content: center;
+  }
+  #support > #support_inner > li > a > img {
+    width: 50%;
+    height: 50%;
+    object-fit: contain;
+  }
+}
+
+/*모바일 : -479px*/
+
+@media all and (max-width: 479px) {
+  body {
+    min-width: 375px;
+  }
+  .container {
+    width: 100%;
+    margin: 0;
+    padding: 0 16px;
+    box-sizing: border-box;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+  }
+
+  /* 영상 슬라이더 */
+  #slider {
+    width: 100%;
+    height: 600px;
+  }
+  /* 블랙프라이데이 */
+  #blkfriday {
+    padding: 80px 0;
+    background-image: url(../img/blackfriday.jpg);
+    background-size: cover;
+    background-position: 80% 0;
+  }
+  #blkfriday > #blk_inner > span {
+    width: 160px;
+    height: 160px;
+    top: 100%;
+    margin-top: -100px;
+  }
+  /* 카테고리 */
+  #category {
+    height: 300px;
+    margin-top: 60px;
+    position: relative;
+    /* overflow: visible; */
+    display: flex;
+    position: relative;
+  }
+
+  #category_inner {
+    width: calc(100% - 50px);
+    width: 300px;
+    left: 12px;
+  }
+  #category_inner li {
+    width: 300px;
+    height: 300px;
+  }
+  #category_inner li > a > img {
+    height: 95%;
+    transform: translateX(120px);
+    bottom: 0;
+  }
+
+  /* main> #style */
+  #style {
+    height: fit-content;
+    background-size: contain;
+    background-image: none !important;
+  }
+  #style > .title_wrap {
+    width: 100%;
+    padding: 0 12px;
+    text-align: left;
+  }
+  #style_inner {
+    margin-top: 12px;
+    display: flex;
+    flex-direction: column;
+    grid-template-columns: none;
+  }
+  /* 기존 슬라이더 제거 */
+  #style_inner > #style_slider {
+    display: none;
+  }
+
+  /* 모바일 스와이프 슬라이더 시작 ------ slick 플러그인 사용*/
+  #style_inner > #style_slider_mobile {
+    display: block;
+    width: 100%;
+    height: 320px;
+    position: relative;
+  }
+  /* 슬릭 전 후 버튼 */
+  #style_slider_mobile .slick-arrow {
+    width: calc(50% - 80px + 20px);
+    content: " ";
+    height: 100%;
+    background-color: #ffffff31;
+    color: #00000000;
+    border: none;
+    position: absolute;
+    top: 0;
+    z-index: 2;
+  }
+  #style_slider_mobile .slick-prev {
+    left: -20px;
+    cursor: pointer;
+  }
+  #style_slider_mobile .slick-next {
+    position: absolute;
+    top: 0;
+    right: -20px;
+    cursor: pointer;
+  }
+  #style_slider_mobile .slick-track {
+    display: flex;
+    gap: 0px;
+  }
+  #style_slider_mobile li {
+    width: 80px;
+    height: 100%;
+    padding: 0 40px;
+    display: flex;
+    flex-direction: column;
+    opacity: 0.5;
+    color: #b6b6b6;
+    transition: 1s all ease-in-out;
+  }
+  #style_inner > #style_slider_mobile ul li div {
+    width: 100%;
+    height: 200px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: 50% 0%;
+  }
+  #style_slider_mobile li.slick-active {
+    opacity: 1 !important;
+    color: #333 !important;
+  }
+
+  #style_inner > #style_slider_mobile ul li.active {
+    opacity: 1;
+    color: #333;
+  }
+  #style_inner > #style_slider_mobile ul li p {
+    font-size: 0.8em;
+    font-weight: 700;
+    letter-spacing: -0.05em;
+    text-align: center;
+    line-height: 1.25em;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 16px;
+  }
+  #style_inner > #style_slider_mobile ul li div {
+    width: 100%;
+    height: 280px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: 50% 0%;
+  }
+  #style_inner > #style_slider_mobile_mobile ul {
+    width: 1200px;
+    height: 320px;
+    display: flex;
+    justify-content: space-between;
+    box-sizing: border-box;
+    position: absolute;
+    left: -48px;
+  }
+
+  #style_inner > #style_slider2 {
+    width: calc(100% + 64px);
+    height: 300px;
+    position: relative;
+    right: -32px;
+    margin-top: 20px;
+  }
+  #style_inner > #style_slider2 > ul {
+    margin-left: -32px;
+    position: relative;
+  }
+  #style_inner > #style_slider2 > ul > li {
+    width: 100%;
+    height: 100%;
+    padding: 40px 0px 140px;
+    background-image: url(../img/main/style2-9.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 100% 0%;
+    position: absolute;
+  }
+  #style_inner > #style_slider2 > ul > li.active {
+    display: none;
+  }
+  #style_inner > #style_slider2 > ul > li.active2 {
+    display: block;
+    z-index: 1;
+    opacity: 1;
+  }
+  .style_box > p {
+    width: 50%;
+  }
+  .style_box > .btn_box {
+    position: absolute;
+    left: 0;
+    bottom: 52px;
+    display: flex;
+    gap: 16px;
+  }
+  .style_box > .btn_box > button {
+    padding: 0;
+  }
+  /* main>#event */
+  #event {
+    height: fit-content;
+  }
+
+  #event > #event_wrapper {
+    grid-column: span 12;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    margin-top: 24px;
+  }
+  #event > .main_title {
+    padding: 0 16px;
+  }
+  #event .main_title_sub {
+    padding: 0 16px;
+  }
+  #event > #event_wrapper > div {
+    grid-column: span 2;
+    height: 180px;
+    border-radius: 16px;
+  }
+  #event > #event_wrapper > div > a {
+    padding: 0 16px;
+  }
+  #event > #event_wrapper > div > a > img {
+    width: 40%;
+    height: auto;
+    object-fit: cover;
+  }
+  #event > #event_wrapper > div > a > div > h3 {
+    font-size: 1.25em;
+  }
+  #event > #event_wrapper > div > a > div > p {
+    display: none;
+  }
+
+  /* 기프트샵 */
+  #giftshop {
+    display: flex;
+    height: fit-content;
+    margin: 60px auto 60px;
+  }
+  #giftshop > #giftshop_inner {
+    height: fit-content;
+  }
+  #giftshop > #giftshop_inner > #giftshop_top {
+    grid-column: span 12;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+  }
+  #giftshop > #giftshop_inner > #giftshop_top > h2 {
+    width: 100%;
+    margin-bottom: 0;
+  }
+  #giftshop > #giftshop_inner > #giftshop_top > ul {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    gap: 16px;
+    justify-content: start;
+    margin-top: 20px;
+  }
+  #giftshop > #giftshop_inner > #giftshop_top > ul > li {
+    width: 25%;
+    height: 56px;
+  }
+  #giftshop > #giftshop_inner > #giftshop_top > ul > li > a {
+    padding: 0;
+  }
+  /* main>#giftshop */
+  #giftshop > #giftshop_inner > #giftshop_bottom {
+    height: fit-content;
+    position: relative;
+    margin: 0;
+    margin-top: 0px;
+  }
+  #giftshop > #giftshop_inner > #giftshop_bottom > #giftshop_slider_wrap {
+    width: calc(100% + 20px);
+    overflow-x: scroll;
+    overflow-y: hidden;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* Internet Explorer 10+ */
+  }
+
+  #giftshop
+    > #giftshop_inner
+    > #giftshop_bottom
+    > #giftshop_slider_wrap
+    ::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Edge */
+  }
+
+  #giftshop
+    > #giftshop_inner
+    > #giftshop_bottom
+    > #giftshop_slider_wrap
+    > #giftshop_slider {
+    gap: 16px;
+    overflow: visible;
+  }
+
+  .product_list {
+    width: 298px;
+  }
+
+  .product_list > .product_img {
+    width: 100%;
+    height: 309px;
+    position: relative;
+  }
+
+  .product_list > .product_img > img {
+    width: 309px;
+    height: 309px;
+    object-fit: contain;
+  }
+  /* main #map */
+  #map {
+    height: fit-content;
+  }
+  #map > .container {
+    padding: 0 16px;
+    box-sizing: border-box;
+    grid-column: span 2;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+    position: static;
+    padding-top: 200px;
+  }
+  #map iframe {
+    width: 100%;
+    height: 360px;
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+  #map_search_box {
+    grid-column: span 4;
+    height: fit-content;
+    background: white;
+    padding: 40px 20px 24px;
+    position: static;
+    top: 50%;
+    margin-top: 0;
+    right: 0;
+    z-index: 10;
+  }
+  #map_search_box > #map_inner_top > h2 > a {
+    font-size: 1.5em;
+    font-weight: 900;
+  }
+  #map_search_box > #map_inner_top > p {
+    display: none;
+  }
+  #map_search_box > #map_inner_bottom {
+    gap: 0;
+    display: block;
+  }
+  #map_search_box > #map_inner_bottom > input {
+    width: 100%;
+    padding-left: 4px;
+  }
+  #map_search_box > #map_inner_bottom > button {
+    width: 100%;
+    height: 60px;
+    margin-top: 24px;
+  }
+
+  /* main >#support */
+
+  #support {
+    margin-top: 60px;
+  }
+  #support > #support_inner {
+    grid-column: span 4;
+    height: fit-content;
+    display: grid;
+    gap: 12px;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  #support > #support_inner {
+    grid-column: span 2;
+    gap: 8px;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  #support > #support_inner > li {
+    grid-column: span 1;
+    padding: 4px;
+    box-sizing: border-box;
+  }
+  #support > #support_inner > li > a {
+    display: flex;
+    padding: 0;
+    gap: 8px;
+    align-items: center;
+    justify-content: center;
+  }
+  #support > #support_inner > li > a > img {
+    width: 50%;
+    height: 50%;
+    object-fit: contain;
+  }
+}
